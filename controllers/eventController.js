@@ -3,13 +3,13 @@ const APIFeatures = require("./../utils/APIFeatures");
 
 exports.getAllEvents = async (req, res, next) => {
   try {
-    // const features = new APIFeatures(Event.find(), req.query)
-    //   .filter()
-    //   .sort()
-    //   .limitFields()
-    //   .paginate();
-    // const events = await features.query;
-    const events = await Event.find({});
+    const features = new APIFeatures(Event.find(), req.query)
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate();
+    const events = await features.query;
+    // const events = await Event.find({});
 
     res.status(200).json({
       status: "Success",
