@@ -2,6 +2,9 @@ const fs = require("fs");
 const express = require("express");
 const morgan = require("morgan");
 
+const AppError = require("./utils/appError");
+const errorHandler = require("./controllers/errorController");
+
 const eventRouter = require("./routes/eventRoutes");
 
 const app = express();
@@ -18,5 +21,11 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1/events/", eventRouter);
+
+app.use((req, res, next) => {
+  next(new AppError(`Can't find ${req.originalUrl}`, 404));
+});
+
+app.use(errorHandler);
 
 module.exports = app;
