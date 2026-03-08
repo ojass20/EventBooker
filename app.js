@@ -6,6 +6,7 @@ const AppError = require("./utils/appError");
 const errorHandler = require("./controllers/errorController");
 
 const eventRouter = require("./routes/eventRoutes");
+const userRouter = require("./routes/userRoutes");
 
 const app = express();
 app.set("query parser", "extended");
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1/events/", eventRouter);
+app.use("/api/v1/users/", userRouter);
 
 app.use((req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl}`, 404));
