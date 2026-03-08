@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ojass20/EventBooker#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cross-env": "^10.1.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
