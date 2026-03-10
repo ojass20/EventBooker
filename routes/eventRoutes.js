@@ -1,5 +1,6 @@
 const express = require("express");
 const eventController = require("../controllers/eventController");
+const authController = require(".././controllers/authController");
 
 const router = express.Router();
 
@@ -12,6 +13,10 @@ router
   .route("/:id")
   .get(eventController.getEvent)
   .patch(eventController.updateEvent)
-  .delete(eventController.deleteEvent);
+  .delete(
+    authController.protect,
+    authController.restrictTo("admin", "organiser"),
+    eventController.deleteEvent,
+  );
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const Event = require("./../models/eventModel");
+const Event = require("../models/eventModel.js");
 const APIFeatures = require("./../utils/APIFeatures");
 const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
