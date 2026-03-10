@@ -6,7 +6,7 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(eventController.getAllEvents)
+  .get(authController.protect, eventController.getAllEvents)
   .post(eventController.createEvent);
 
 router
