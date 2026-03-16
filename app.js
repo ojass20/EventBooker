@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "development") {
 // Middleware for rate limiting
 const limiter = rateLimiter({
   max: 100, // No. of requests from same IP
-  window: 60 * 60 * 1000, // Time frame in ms
+  windowMs: 60 * 60 * 1000, // Time frame in ms
   message:
     "Too many incomming requests from this IP, please try again after 1 hour",
 });
