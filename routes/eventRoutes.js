@@ -1,8 +1,11 @@
 const express = require("express");
 const eventController = require("../controllers/eventController");
 const authController = require(".././controllers/authController");
+const reviewRouter = require("./reviewRoutes");
 
 const router = express.Router();
+
+router.use("/:eventId/reviews", reviewRouter);
 
 router
   .route("/")

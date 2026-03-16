@@ -19,7 +19,6 @@ exports.getReviews = catchAsync(async (req, res, next) => {
 // Nested routes checks are handled by a middleware now
 exports.createReview = catchAsync(async (req, res, next) => {
   // Allow nested routes
-  console.log(req);
   if (!req.body.event) req.body.event = req.params.eventId;
   if (!req.body.user) req.body.user = req.user.id;
   const newReview = await Review.create(req.body);
