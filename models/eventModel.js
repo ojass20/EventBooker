@@ -11,38 +11,48 @@ const eventSchema = new mongoose.Schema({
     maxLength: [50, "An event name must be less than 50 characters"],
   },
   slug: String,
+  duration: {
+    type: Number,
+    required: [true, "An event must have a duration"],
+  },
   price: {
     type: Number,
     required: [true, "Please specify the price"],
   },
-  location: {
+  locationType: {
     type: String,
-    required: [true, "Please specify the location"],
+    required: [true, "Please specify the location type"],
+    enum: {
+      values: ["Cafe", "Restaurant", "Sports Bar"],
+      message:
+        "Category can be one of the following : Cafe, Restaurant, Sports Bar",
+    },
   },
   category: {
     type: String,
     required: [true, "Please specify the category"],
     enum: {
-      values: [
-        "concert",
-        "workshop",
-        "conference",
-        "meetup",
-        "sports",
-        "comedy",
-      ],
-      message: [
-        "Category can be one of the following : Concert, Workshop, Conference, Meetup, Sports, Comedy",
-      ],
+      values: ["Cricket", "Football", "Formula 1"],
+      message:
+        "Category can be one of the following : Cricket, Football, Formula 1",
     },
+  },
+  totalRatings: {
+    type: Number,
+    default: 0,
+  },
+  averageRatings: {
+    type: Number,
+    default: 4.5,
+    min: [1, "Rating must be above 1.0"],
+    max: [5, "Rating must be below 5.0"],
   },
   currentAttendees: {
     type: Number,
     default: 0,
   },
   maxAttendees: Number,
-  startDate: Date,
-  endDate: Date,
+  startDateTime: Date,
   createdAt: {
     type: Date,
     default: Date.now(),
@@ -52,13 +62,21 @@ const eventSchema = new mongoose.Schema({
     type: String,
     required: [true, "An event must have a cover image"],
   },
+  images: [String],
   description: {
     type: String,
     trim: true,
   },
-  organiser: {
-    type: String,
-    required: [true, "Please specify the organiser"],
+  geoLocation: {
+    // GeoJSON to specify Geospatial data
+    type: {
+      type: String,
+      default: "Point",
+      enum: ["Point"],
+    },
+    coordinates: [Number],
+    address: String,
+    description: String,
   },
 });
 
