@@ -30,6 +30,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Set Security HTTP headers
+app.use(helmet());
+
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
@@ -43,7 +46,15 @@ const limiter = rateLimiter({
 });
 app.use("/api", limiter);
 
-app.use(express.json());
+app.use(express.json({ limit: "10kb" })); // Middleware for requests to POST method
+
+// Data sanitization against NoSQL query injection
+app.use(mongoSanitize());
+
+// Data sanitization against XSS
+app.use(xss());
+
+// Prevent parameter polution
 
 app.use((req, res, next) => {
   console.log("Hello from the Event Booker app middleware!");
