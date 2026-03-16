@@ -8,6 +8,10 @@ const router = express.Router();
 router.use("/:eventId/reviews", reviewRouter);
 
 router
+  .route("/events-within/:distance/center/:latlng/unit/:unit")
+  .get(eventController.getEventsWithin);
+
+router
   .route("/")
   .get(eventController.getAllEvents)
   .post(
