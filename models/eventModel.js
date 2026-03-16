@@ -78,10 +78,24 @@ const eventSchema = new mongoose.Schema({
     address: String,
     description: String,
   },
+  contactPerson: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+    },
+  ],
 });
 
 eventSchema.pre("save", function (next) {
   this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+eventSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "contactPerson",
+    select: "-__v -passwordChangedAt -passwordResetExpires -passwordResetToken",
+  });
   next();
 });
 
