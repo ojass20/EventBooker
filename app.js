@@ -55,6 +55,7 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // Prevent parameter polution
+app.use(hpp());
 
 app.use((req, res, next) => {
   console.log("Hello from the Event Booker app middleware!");
