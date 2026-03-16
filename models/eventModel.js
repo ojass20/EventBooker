@@ -92,6 +92,11 @@ const eventSchema = new mongoose.Schema(
   },
 );
 
+// Implementing indexing to improve query performance
+eventSchema.index({ price: 1, averageRatings: -1 });
+eventSchema.index({ slug: 1 });
+eventSchema.index({ geoLocation: "2dsphere" }); // Indexing for geospatial query and data
+
 // Virtually populating reviews on events schema to avoid hitting the 16 MB memory limit on document size
 eventSchema.virtual("reviews", {
   ref: "Review", // This is the model we are referencing here
