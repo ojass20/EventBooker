@@ -12,6 +12,10 @@ router
   .get(eventController.getEventsWithin);
 
 router
+  .route("/:distances/:latlng/unit/:unit")
+  .get(eventController.getDistances);
+
+router
   .route("/")
   .get(eventController.getAllEvents)
   .post(
