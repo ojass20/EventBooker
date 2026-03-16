@@ -22,7 +22,7 @@ exports.getAllEvents = catchAsync(async (req, res, next) => {
 });
 
 exports.getEvent = catchAsync(async (req, res, next) => {
-  const event = await Event.findById(req.params.id);
+  const event = await Event.findById(req.params.id).populate("reviews");
   if (!event) {
     return next(new AppError("No event found with given ID", 404));
   }
