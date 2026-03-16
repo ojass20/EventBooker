@@ -6,16 +6,24 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(authController.protect, eventController.getAllEvents)
-  .post(eventController.createEvent);
+  .get(eventController.getAllEvents)
+  .post(
+    authController.protect,
+    authController.restrictTo("admin", "manager"),
+    eventController.createEvent,
+  );
 
 router
   .route("/:id")
   .get(eventController.getEvent)
-  .patch(eventController.updateEvent)
+  .patch(
+    authController.protect,
+    authController.restrictTo("admin", "manager"),
+    eventController.updateEvent,
+  )
   .delete(
     authController.protect,
-    authController.restrictTo("admin", "organiser"),
+    authController.restrictTo("admin", "manager"),
     eventController.deleteEvent,
   );
 
