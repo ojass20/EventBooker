@@ -13,6 +13,7 @@ const hpp = require("hpp");
 
 const eventRouter = require("./routes/eventRoutes");
 const userRouter = require("./routes/userRoutes");
+const reviewRouter = require("./routes/reviewRoutes");
 
 const app = express();
 app.set("query parser", "extended"); // In Express 5, we need to set this so that we can parse complex queries in API URLs
@@ -64,6 +65,7 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/events/", eventRouter);
 app.use("/api/v1/users/", userRouter);
+app.use("/api/v1/reviews/", reviewRouter);
 
 app.use((req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl}`, 404));
