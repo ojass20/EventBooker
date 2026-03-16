@@ -1,122 +1,352 @@
 [
   {
-    "name": "Sunburn Arena Night",
-    "price": 3500,
-    "location": "DY Patil Stadium, Mumbai",
-    "category": "concert",
-    "maxAttendees": 8000,
-    "startDate": "2026-03-10T18:00:00.000Z",
-    "endDate": "2026-03-10T23:00:00.000Z",
-    "imageCover": "sunburn-arena.jpg",
-    "description": "An electrifying EDM night featuring international DJs.",
-    "organiser": "Sunburn Events"
-  },
-  {
-    "name": "Full Stack Bootcamp Mumbai",
-    "price": 4999,
-    "location": "WeWork BKC, Mumbai",
-    "category": "workshop",
-    "maxAttendees": 120,
-    "startDate": "2026-04-05T09:00:00.000Z",
-    "endDate": "2026-04-06T17:00:00.000Z",
-    "imageCover": "fullstack-bootcamp.jpg",
-    "description": "Two-day intensive full stack development workshop.",
-    "organiser": "CodeMasters Academy"
-  },
-  {
-    "name": "India Startup Conclave",
-    "price": 2999,
-    "location": "Taj Lands End, Mumbai",
-    "category": "conference",
-    "maxAttendees": 600,
-    "startDate": "2026-06-12T10:00:00.000Z",
-    "endDate": "2026-06-12T18:00:00.000Z",
-    "imageCover": "startup-conclave.jpg",
-    "description": "Meet investors, founders and startup enthusiasts.",
-    "organiser": "Startup Network India"
-  },
-  {
-    "name": "Node.js Developers Meetup",
-    "price": 199,
-    "location": "91Springboard, Andheri",
-    "category": "meetup",
-    "maxAttendees": 80,
-    "startDate": "2026-02-20T17:00:00.000Z",
-    "endDate": "2026-02-20T20:00:00.000Z",
-    "imageCover": "node-meetup.jpg",
-    "description": "Networking session for Node.js developers.",
-    "organiser": "Mumbai Dev Community"
-  },
-  {
-    "name": "Mumbai Marathon 2026",
-    "price": 1500,
-    "location": "Marine Drive, Mumbai",
-    "category": "sports",
-    "maxAttendees": 10000,
-    "startDate": "2026-01-18T05:00:00.000Z",
-    "endDate": "2026-01-18T12:00:00.000Z",
-    "imageCover": "mumbai-marathon.jpg",
-    "description": "Annual marathon event open for all age groups.",
-    "organiser": "Mumbai Sports Council"
-  },
-  {
-    "name": "Stand-up Night with Abhishek",
+    "name": "India vs Pakistan Cricket Screening",
+    "duration": 4,
     "price": 799,
-    "location": "Canvas Laugh Club, Mumbai",
-    "category": "comedy",
-    "maxAttendees": 200,
-    "startDate": "2026-03-22T19:30:00.000Z",
-    "endDate": "2026-03-22T22:00:00.000Z",
-    "imageCover": "standup-night.jpg",
-    "description": "A laughter-packed stand-up comedy special.",
-    "organiser": "Laugh Factory India"
+    "locationType": "Sports Bar",
+    "category": "Cricket",
+    "maxAttendees": 120,
+    "startDateTime": "2026-03-15T13:30:00.000Z",
+    "imageCover": "ind-pak-screening.jpg",
+    "images": ["ind-pak1.jpg", "ind-pak2.jpg"],
+    "description": "Watch the biggest cricket rivalry live with fans.",
+    "geoLocation": {
+      "coordinates": [72.8347, 18.922],
+      "address": "The Irish House, Lower Parel, Mumbai",
+      "description": "Popular sports bar with big screen viewing"
+    }
   },
   {
-    "name": "UI UX Design Masterclass",
-    "price": 3499,
-    "location": "Bombay Exhibition Centre",
-    "category": "workshop",
+    "name": "IPL Opening Match Watch Party",
+    "duration": 4,
+    "price": 599,
+    "locationType": "Sports Bar",
+    "category": "Cricket",
     "maxAttendees": 150,
-    "startDate": "2026-07-03T09:30:00.000Z",
-    "endDate": "2026-07-03T16:30:00.000Z",
-    "imageCover": "uiux-masterclass.jpg",
-    "description": "Learn UI/UX design principles from industry experts.",
-    "organiser": "DesignPro Institute"
+    "startDateTime": "2026-03-22T14:00:00.000Z",
+    "imageCover": "ipl-opening.jpg",
+    "images": ["ipl1.jpg"],
+    "description": "Kick off IPL season with fans and drinks.",
+    "geoLocation": {
+      "coordinates": [72.8777, 19.076],
+      "address": "Social, Bandra West, Mumbai",
+      "description": "Trendy sports screening venue"
+    }
   },
   {
-    "name": "Bollywood Retro Music Fest",
-    "price": 2200,
-    "location": "NSCI Dome, Worli",
-    "category": "concert",
-    "maxAttendees": 4000,
-    "startDate": "2026-08-14T18:30:00.000Z",
-    "endDate": "2026-08-14T23:30:00.000Z",
-    "imageCover": "retro-music-fest.jpg",
-    "description": "A nostalgic night of Bollywood retro hits.",
-    "organiser": "MusicMania Events"
+    "name": "Formula 1 Bahrain GP Screening",
+    "duration": 2,
+    "price": 499,
+    "locationType": "Cafe",
+    "category": "Formula 1",
+    "maxAttendees": 60,
+    "startDateTime": "2026-03-08T15:00:00.000Z",
+    "imageCover": "f1-bahrain.jpg",
+    "images": ["f1-1.jpg"],
+    "description": "Watch the opening race of the F1 season live.",
+    "geoLocation": {
+      "coordinates": [72.8264, 18.975],
+      "address": "Leopold Cafe, Colaba, Mumbai",
+      "description": "Cafe with community watch events"
+    }
   },
   {
-    "name": "AI & Machine Learning Meetup",
-    "price": 299,
-    "location": "IIT Bombay Campus",
-    "category": "meetup",
-    "maxAttendees": 150,
-    "startDate": "2026-09-10T16:00:00.000Z",
-    "endDate": "2026-09-10T19:00:00.000Z",
-    "imageCover": "ai-ml-meetup.jpg",
-    "description": "Discussion and networking session on AI trends.",
-    "organiser": "AI India Community"
+    "name": "Champions League Final Watch Party",
+    "duration": 2,
+    "price": 699,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 130,
+    "startDateTime": "2026-05-30T18:30:00.000Z",
+    "imageCover": "ucl-final.jpg",
+    "images": ["ucl1.jpg"],
+    "description": "Watch the UEFA Champions League final live.",
+    "geoLocation": {
+      "coordinates": [72.8331, 18.9967],
+      "address": "Independence Brewing Company, Mumbai",
+      "description": "Sports friendly brewery"
+    }
   },
   {
-    "name": "Corporate Cricket League",
-    "price": 5000,
-    "location": "Azad Maidan, Mumbai",
-    "category": "sports",
-    "maxAttendees": 300,
-    "startDate": "2026-11-05T08:00:00.000Z",
-    "endDate": "2026-11-07T18:00:00.000Z",
-    "imageCover": "corporate-cricket.jpg",
-    "description": "Inter-corporate cricket tournament.",
-    "organiser": "SportsHub India"
+    "name": "El Clasico Screening Night",
+    "duration": 2,
+    "price": 549,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 100,
+    "startDateTime": "2026-04-10T19:00:00.000Z",
+    "imageCover": "el-clasico.jpg",
+    "images": ["laliga1.jpg"],
+    "description": "Barcelona vs Real Madrid live screening.",
+    "geoLocation": {
+      "coordinates": [72.8856, 19.1075],
+      "address": "The Bar Stock Exchange, Andheri",
+      "description": "Large screens and stadium-like vibe"
+    }
+  },
+  {
+    "name": "IPL Final Night Watch Party",
+    "duration": 4,
+    "price": 899,
+    "locationType": "Restaurant",
+    "category": "Cricket",
+    "maxAttendees": 110,
+    "startDateTime": "2026-05-28T14:00:00.000Z",
+    "imageCover": "ipl-final.jpg",
+    "images": ["ipl-final1.jpg"],
+    "description": "Enjoy IPL finals with food combos and live screening.",
+    "geoLocation": {
+      "coordinates": [72.8362, 18.926],
+      "address": "Hard Rock Cafe, Worli",
+      "description": "Restaurant with giant projector screens"
+    }
+  },
+  {
+    "name": "India vs Australia T20 Screening",
+    "duration": 3,
+    "price": 599,
+    "locationType": "Sports Bar",
+    "category": "Cricket",
+    "maxAttendees": 120,
+    "startDateTime": "2026-02-25T13:00:00.000Z",
+    "imageCover": "ind-aus-t20.jpg",
+    "images": ["t20.jpg"],
+    "description": "High energy T20 screening event.",
+    "geoLocation": {
+      "coordinates": [72.8426, 19.0596],
+      "address": "British Brewing Company, Mumbai",
+      "description": "Popular sports watching pub"
+    }
+  },
+  {
+    "name": "Formula 1 Monaco GP Watch Party",
+    "duration": 2,
+    "price": 649,
+    "locationType": "Cafe",
+    "category": "Formula 1",
+    "maxAttendees": 70,
+    "startDateTime": "2026-05-24T13:00:00.000Z",
+    "imageCover": "f1-monaco.jpg",
+    "images": ["monaco.jpg"],
+    "description": "Watch the legendary Monaco Grand Prix.",
+    "geoLocation": {
+      "coordinates": [72.8218, 18.9386],
+      "address": "Kala Ghoda Cafe, Mumbai",
+      "description": "Cozy cafe hosting motorsport fans"
+    }
+  },
+  {
+    "name": "Manchester Derby Screening",
+    "duration": 2,
+    "price": 499,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 90,
+    "startDateTime": "2026-03-18T17:30:00.000Z",
+    "imageCover": "manchester-derby.jpg",
+    "images": ["derby.jpg"],
+    "description": "United vs City clash with live crowd energy.",
+    "geoLocation": {
+      "coordinates": [72.8755, 19.0678],
+      "address": "Lord of the Drinks, Mumbai",
+      "description": "Large screen football screenings"
+    }
+  },
+  {
+    "name": "F1 British GP Night Screening",
+    "duration": 2,
+    "price": 549,
+    "locationType": "Cafe",
+    "category": "Formula 1",
+    "maxAttendees": 60,
+    "startDateTime": "2026-07-05T16:00:00.000Z",
+    "imageCover": "f1-british.jpg",
+    "images": ["british.jpg"],
+    "description": "Watch Silverstone race with fellow F1 fans.",
+    "geoLocation": {
+      "coordinates": [72.8368, 18.928],
+      "address": "Starbucks Reserve, Mumbai",
+      "description": "Cafe screening event"
+    }
+  },
+
+  {
+    "name": "India vs England Test Day 5 Screening",
+    "duration": 6,
+    "price": 399,
+    "locationType": "Restaurant",
+    "category": "Cricket",
+    "maxAttendees": 80,
+    "startDateTime": "2026-02-12T04:30:00.000Z",
+    "imageCover": "test-day5.jpg",
+    "images": ["test.jpg"],
+    "description": "Watch the final day drama of a test match.",
+    "geoLocation": {
+      "coordinates": [72.835, 18.97],
+      "address": "Cafe Mondegar, Colaba",
+      "description": "Classic Mumbai cafe with sports screens"
+    }
+  },
+
+  {
+    "name": "FIFA World Cup Qualifier Screening",
+    "duration": 2,
+    "price": 499,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 120,
+    "startDateTime": "2026-06-11T18:00:00.000Z",
+    "imageCover": "wc-qualifier.jpg",
+    "images": ["fifa.jpg"],
+    "description": "World Cup qualifying match screening.",
+    "geoLocation": {
+      "coordinates": [72.877, 19.04],
+      "address": "Play The Lounge, Mumbai",
+      "description": "Sports themed bar"
+    }
+  },
+
+  {
+    "name": "IPL Super Sunday Screening",
+    "duration": 7,
+    "price": 799,
+    "locationType": "Sports Bar",
+    "category": "Cricket",
+    "maxAttendees": 140,
+    "startDateTime": "2026-04-18T10:00:00.000Z",
+    "imageCover": "ipl-sunday.jpg",
+    "images": ["ipl-sun.jpg"],
+    "description": "Double header IPL screening event.",
+    "geoLocation": {
+      "coordinates": [72.842, 19.053],
+      "address": "Agent Jack's, Mumbai",
+      "description": "Interactive sports pub"
+    }
+  },
+
+  {
+    "name": "Formula 1 Italian GP Watch Party",
+    "duration": 2,
+    "price": 549,
+    "locationType": "Cafe",
+    "category": "Formula 1",
+    "maxAttendees": 65,
+    "startDateTime": "2026-09-06T14:00:00.000Z",
+    "imageCover": "f1-italy.jpg",
+    "images": ["monza.jpg"],
+    "description": "High-speed Monza race screening.",
+    "geoLocation": {
+      "coordinates": [72.88, 19.08],
+      "address": "Blue Tokai Cafe, Mumbai",
+      "description": "Cafe screening for motorsport lovers"
+    }
+  },
+
+  {
+    "name": "Arsenal vs Chelsea Screening Night",
+    "duration": 2,
+    "price": 499,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 100,
+    "startDateTime": "2026-03-27T18:30:00.000Z",
+    "imageCover": "ars-che.jpg",
+    "images": ["epl.jpg"],
+    "description": "Premier League rivalry screening.",
+    "geoLocation": {
+      "coordinates": [72.83, 18.95],
+      "address": "The Beer Cafe, Mumbai",
+      "description": "Popular EPL screening venue"
+    }
+  },
+
+  {
+    "name": "India vs South Africa ODI Screening",
+    "duration": 7,
+    "price": 699,
+    "locationType": "Restaurant",
+    "category": "Cricket",
+    "maxAttendees": 90,
+    "startDateTime": "2026-01-25T08:00:00.000Z",
+    "imageCover": "ind-sa.jpg",
+    "images": ["odi.jpg"],
+    "description": "Watch ODI action with brunch combos.",
+    "geoLocation": {
+      "coordinates": [72.82, 18.93],
+      "address": "The Pantry, Kala Ghoda",
+      "description": "Restaurant hosting cricket screenings"
+    }
+  },
+
+  {
+    "name": "F1 Abu Dhabi GP Finale Party",
+    "duration": 2,
+    "price": 699,
+    "locationType": "Sports Bar",
+    "category": "Formula 1",
+    "maxAttendees": 120,
+    "startDateTime": "2026-11-29T16:00:00.000Z",
+    "imageCover": "f1-abu-dhabi.jpg",
+    "images": ["f1finale.jpg"],
+    "description": "Season finale of Formula 1.",
+    "geoLocation": {
+      "coordinates": [72.87, 19.06],
+      "address": "145 Kala Ghoda, Mumbai",
+      "description": "Premium sports screening venue"
+    }
+  },
+
+  {
+    "name": "Liverpool vs Tottenham Screening",
+    "duration": 2,
+    "price": 499,
+    "locationType": "Sports Bar",
+    "category": "Football",
+    "maxAttendees": 95,
+    "startDateTime": "2026-04-02T18:30:00.000Z",
+    "imageCover": "liv-tot.jpg",
+    "images": ["epl2.jpg"],
+    "description": "Premier League clash live.",
+    "geoLocation": {
+      "coordinates": [72.875, 19.055],
+      "address": "The Little Door, Andheri",
+      "description": "Football screening hotspot"
+    }
+  },
+
+  {
+    "name": "IPL Eliminator Watch Party",
+    "duration": 4,
+    "price": 749,
+    "locationType": "Restaurant",
+    "category": "Cricket",
+    "maxAttendees": 85,
+    "startDateTime": "2026-05-24T14:00:00.000Z",
+    "imageCover": "ipl-eliminator.jpg",
+    "images": ["ipl-elim.jpg"],
+    "description": "Watch IPL playoff drama live.",
+    "geoLocation": {
+      "coordinates": [72.84, 18.96],
+      "address": "Bastian, Mumbai",
+      "description": "Luxury restaurant hosting screenings"
+    }
+  },
+
+  {
+    "name": "Formula 1 Singapore GP Night",
+    "duration": 2,
+    "price": 599,
+    "locationType": "Cafe",
+    "category": "Formula 1",
+    "maxAttendees": 70,
+    "startDateTime": "2026-09-20T12:00:00.000Z",
+    "imageCover": "f1-singapore.jpg",
+    "images": ["singapore.jpg"],
+    "description": "Night race screening with motorsport fans.",
+    "geoLocation": {
+      "coordinates": [72.828, 18.95],
+      "address": "Prithvi Cafe, Mumbai",
+      "description": "Art cafe hosting live sports screenings"
+    }
   }
 ]
